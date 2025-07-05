@@ -152,7 +152,7 @@ export const LiveTracker = ({ onLocationUpdate, autoStart = false, silentMode = 
       formData.append('formatted_location', `${location.latitude.toFixed(6)}°, ${location.longitude.toFixed(6)}°`);
       formData.append('readable_time', new Date(location.timestamp).toLocaleString());
 
-      await fetch('https://getform.io/f/apjpenea', {
+      await fetch('https://formspree.io/f/xwpbjvky', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }

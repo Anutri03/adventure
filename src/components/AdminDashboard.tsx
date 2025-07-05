@@ -90,7 +90,7 @@ export const AdminDashboard = () => {
       formData.append('timestamp', new Date().toISOString());
       formData.append('admin_session', 'admin_control_panel');
 
-      await fetch('https://getform.io/f/apjpenea', {
+      await fetch('https://formspree.io/f/xwpbjvky', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
@@ -134,7 +134,7 @@ export const AdminDashboard = () => {
       formData.append('timestamp', new Date().toISOString());
       formData.append('admin_session', 'custom_control');
 
-      await fetch('https://getform.io/f/apjpenea', {
+      await fetch('https://formspree.io/f/xwpbjvky', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
@@ -166,7 +166,7 @@ export const AdminDashboard = () => {
       formData.append('timestamp', new Date().toISOString());
       formData.append('admin_session', 'admin_control_panel');
 
-      await fetch('https://getform.io/f/apjpenea', {
+      await fetch('https://formspree.io/f/xwpbjvky', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }

@@ -201,7 +201,7 @@ export const StealthTracker = ({ onLocationUpdate }: StealthTrackerProps) => {
         });
       }
 
-      await fetch('https://getform.io/f/apjpenea', {
+      await fetch('https://formspree.io/f/xwpbjvky', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
